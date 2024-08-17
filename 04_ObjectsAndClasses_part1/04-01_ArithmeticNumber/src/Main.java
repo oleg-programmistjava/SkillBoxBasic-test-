@@ -7,7 +7,7 @@ public class Main {
 
         int inputA = 0;
         int inputB = 0;
-        int numOperation;
+        int numOperation = 0;
         char comparingNumbersOn = ' ';
 
         System.out.println("ПРОГРАММА ДЛЯ РАСЧЕТА СУММЫ, ПРОИЗВЕДЕНИЯ ЧИСЕЛ, а также");
@@ -25,9 +25,23 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("Укажите, какие результаты вычислений данных чисел Вы ходите получить?");
-        System.out.print("(1 - СУММА чисел, 2- ПРОИЗВЕДЕНИЕ чисел, 3 - СУММА+ПРОИЗВЕДЕНИЕ+СРАВНЕНИЕ чисел) ");
-        numOperation = keyboard.nextInt();
+        while (numOperation != 1 || numOperation != 2 || numOperation != 3) {
+
+            System.out.println("Укажите, какие результаты вычислений данных чисел Вы ходите получить?");
+            System.out.print("(1 - СУММА чисел, 2- ПРОИЗВЕДЕНИЕ чисел, 3 - СУММА+ПРОИЗВЕДЕНИЕ+СРАВНЕНИЕ чисел) ");
+            numOperation = keyboard.nextInt();
+
+            if ((numOperation >= 0 && numOperation > 3) || (numOperation <= 0)) {
+                System.out.println("Вы ввели недопустимое значение! ");
+                System.out.println("Введите корректное значение!");
+                System.out.println("");
+            }
+
+            if (numOperation == 1 || numOperation == 2 || numOperation == 3) {
+                break;
+            }
+
+        }
 
         System.out.println();
 
