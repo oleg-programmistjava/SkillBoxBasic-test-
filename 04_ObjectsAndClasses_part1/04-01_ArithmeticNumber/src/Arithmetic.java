@@ -11,10 +11,31 @@ public class Arithmetic {
     }
 
     public void printAllArithmetics() {
-        System.out.println("СУММА переданных чисел: " + (a+b) + " | (" + a + " + " + b + ")");
-        System.out.println("ПРОИЗВЕДЕНИЕ переданных чисел: " + a*b + " | (" + a + " * " + b + ")");
+
+        printSumm();
+
+        printComposition();
 
         System.out.println("---");
+
+        printComparingNumbers();
+
+
+    }
+
+    public void printSumm() {
+
+        System.out.println("СУММА переданных чисел: " + (a+b) + " | (" + a + " + " + b + ")");
+
+    }
+
+    public void printComposition() {
+
+        System.out.println("ПРОИЗВЕДЕНИЕ переданных чисел: " + a*b + " | (" + a + " * " + b + ")");
+
+    }
+
+    public void printComparingNumbers() {
 
         System.out.println("СРАВНЕНИЕ ЧИСЕЛ ПОКАЗАЛО, ЧТО: ");
 
@@ -29,6 +50,7 @@ public class Arithmetic {
         if (a == b) {
             System.out.println("- первое и второе число равны");
         }
+
     }
 
 }
