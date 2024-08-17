@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -47,8 +48,25 @@ public class Main {
 
         if (numOperation == 1 || numOperation == 2) {
 
-            System.out.print("Также, укажите понадобиться ли СРАВНЕНИЕ (больше, меньше или равно) чисел? (Д/Н) ");
-            comparingNumbersOn = keyboard.findWithinHorizon(".",0).charAt(0);
+            while (comparingNumbersOn != 'Д' || comparingNumbersOn != 'д' || comparingNumbersOn != 'Н' ||
+            comparingNumbersOn != 'н') {
+                System.out.print("Также, укажите понадобиться ли СРАВНЕНИЕ (больше, меньше или равно) чисел? (Д/Н) ");
+                comparingNumbersOn = keyboard.findWithinHorizon(".",0).charAt(0);
+
+                if (comparingNumbersOn != 'Д' || comparingNumbersOn != 'д' || comparingNumbersOn != 'Н' ||
+                        comparingNumbersOn != 'н') {
+                    System.out.println("Вы ввели недопустимый символ!");
+                    System.out.println("Введите корректный символ!");
+                    System.out.println();
+                }
+
+                if (comparingNumbersOn == 'Д' || comparingNumbersOn == 'д' || comparingNumbersOn == 'Н' ||
+                        comparingNumbersOn == 'н') {
+                    break;
+                }
+            }
+
+
 
         }
 
