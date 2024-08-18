@@ -4,7 +4,6 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
-    private double totalWeight = 0;
 
     public Basket() {
         increaseCount(1);
@@ -53,10 +52,6 @@ public class Basket {
         items = items + "\n" + name + " - " +
                 count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
-    }
-
-    public void add(String name, int price, int count, double weight) {
-
     }
 
     public void clear() {
